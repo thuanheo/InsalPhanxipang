@@ -7,3 +7,27 @@ vi:
     sign_in: "Đăng nhập"
     enter_email: "Nhập email của bạn"
     enter_password: "Nhập mật khẩu của bạn"
+    products:
+      number_of_order: "số thứ tự"
+      product_name: "tên sản phẩm"
+      category_name: "tên danh mục"
+      price: "giá"
+      renting_fee: "phí thuê"
+      image_url: "link ảnh"
+  hello: "Hello world"
+  views:
+    pagination:
+      first: "« Trang Đầu"
+      last: "Trang Cuối »"
+      previous: "‹ Trở Về"
+      next: "Tiếp ›"
+      truncate: "…"
+  helpers:
+    page_entries_info:
+      one_page:
+        display_entries:
+          zero: "không có %{entry_name}"
+          one: "hiển thị <b>1</b> %{entry_name}"
+          other: "hiển thị <b>atất cả %{count}</b> %{entry_name}"
+      more_pages:
+        display_entries: " hiển thị %{entry_name} từ <b>%{first} - %{last}</b> của <b>%{total}</b> %{entry_name}"
