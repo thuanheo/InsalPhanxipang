@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InsalPhanxipang</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+    <%= render  "layouts/header" %>
+    <%= render  "layouts/side-bar" %>
+    <div class="content-wrapper">
+      <section class="content-header">
+        <%= yield %>
+      </section>
+    </div>
+    <%= render  "layouts/footer" %>
+  </body>
+</html>

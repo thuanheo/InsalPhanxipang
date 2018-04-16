@@ -1,0 +1,12 @@
+header {
+  nav {
+    .input-group--custom {
+      position: absolute;
+      left: 10%;
+      top: 10px;
+      .form-control {
+        width: 70%;
+      }
+    }
+  }
+}
