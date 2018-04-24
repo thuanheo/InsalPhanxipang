@@ -34,10 +34,11 @@ gem "jbuilder", "~> 2.5"
 
 #Add some Gemfile
 gem "pry"
+gem "bcrypt", "~> 3.1.7"
 gem "jquery-datatables-rails", "~> 3.4.0"
 gem "jquery-ui-rails"
 gem "bootstrap-sass", "~> 3.3.7"
-gem "bootstrap3-datetimepicker-rails", '~> 4.17.42'
+gem "bootstrap3-datetimepicker-rails", "~> 4.17.42"
 gem "font-awesome-rails"
 gem "jquery-rails"
 
