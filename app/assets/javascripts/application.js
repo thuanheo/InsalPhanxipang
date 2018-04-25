@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.validate
 //= require bootstrap-sprockets
+//= require jquery-ui
 //= require rails-ujs
 //= require vendor/adminlte.min
 //= require views/loginView.js

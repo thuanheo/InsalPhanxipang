@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     root "admins#login"
     resources :admins
     resources :categories
+    resources :products
   end
 
 end

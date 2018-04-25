@@ -33,7 +33,6 @@ gem "jbuilder", "~> 2.5"
 # gem 'capistrano-rails', group: :development
 
 #Add some Gemfile
-gem "pry"
 gem "bcrypt", "~> 3.1.7"
 gem "jquery-datatables-rails", "~> 3.4.0"
 gem "jquery-ui-rails"
@@ -41,10 +40,11 @@ gem "bootstrap-sass", "~> 3.3.7"
 gem "bootstrap3-datetimepicker-rails", "~> 4.17.42"
 gem "font-awesome-rails"
 gem "jquery-rails"
-
 #gem jquery-validates
 gem "jquery-validation-rails"
-
+gem "kaminari"
+gem "bootstrap4-kaminari-views"
+gem "pry"
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
