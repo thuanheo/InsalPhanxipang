@@ -1,0 +1,22 @@
+<% products.each_with_index  do |item, index| %>
+  <% if (index == 0 || index % 4 == 0) %>
+    <div class="row row-item">
+    <% end %>
+    <div class="col-md-3 col-sm-6 col-xs-12 item">
+      <div class="image" style="background-image: url(<%= item.image %>);">
+        <i class="fa fa-times-circle fa-2x delete"></i>
+        <i class="fa fa-edit fa-2x edit"></i>
+      </div>
+      <div class="title">
+        <a class="link" href="#">
+          <p><%= item.name %></p>
+        </a>
+      </div>
+    </div>
+    <% if ((index + 1) % 4 == 0 || index == (@products.size - 1)) %>
+    </div>
+  <% end %>
+<% end %>
+<div class="row paginate">
+  <%= paginate @products, theme: "twitter-bootstrap-4" %>
+</div>

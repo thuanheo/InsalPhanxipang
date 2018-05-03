@@ -19,4 +19,4 @@
 //= require vendor/adminlte.min
 //= require views/loginView.js
 //= require notify.js
-
+//= require views/productsView.js
