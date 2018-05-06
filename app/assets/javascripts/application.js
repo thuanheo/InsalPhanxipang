@@ -18,3 +18,5 @@
 //= require rails-ujs
 //= require vendor/adminlte.min
 //= require views/loginView.js
+//= require notify.js
+
