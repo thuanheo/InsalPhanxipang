@@ -1,41 +1,9 @@
-<div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
-  <div class="row">
-    <div class="col-sm-12">
-      <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
-        <thead>
-          <tr role="row">
-            <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Rendering engine: activate to sort column descending" style="width: 172px;"><%= t "admin.products.number_of_order" %></th>
-            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 212px;"><%= t "admin.products.category_name" %></th>
-            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 188px;"><%= t "admin.products.product_name" %></th>
-            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 146px;"><%= t "admin.products.price" %></th>
-            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 106px;"><%= t "admin.products.renting_fee" %></th>
-            <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 106px;"><%= t "admin.products.image_url" %></th>
-          </tr>
-        </thead>
-        <tbody></tr>
-        <% @products.each_with_index do |p, index| %>
-          <tr role="row" class="odd">
-            <td><%= params[:page].nil? ? (params[:page].to_i*10 + index + 1) : (params[:page].to_i*10 + index -10 + 1) %>
-            </td>
-            <td><%= p.category.name %></td>
-            <td><%= p.name %></td>
-            <td><%= p.price %></td>
-            <td><%= p.renting_fee %></td>
-            <td><%= p.image %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+<div class="content">
+  <div class="select">
+    <%= select_tag 'category', options_for_select(@categories.collect{ |u| [u.name, u.id] }, params[:id]),class: "select-box"%>
+    <i class="fa fa-plus-circle fa-3x add"></i>
   </div>
-</div>
-<div class="row ">
-  <div class="col-sm-12">
-    <%= page_entries_info @products %>
-  </div>
-</div>
-<div class="row">
-  <div class="paginate">
-    <%= paginate @products, theme: "twitter-bootstrap-4" %>
-  </div>
+<div id="show">
+ <%= render "form", products: @products %>
 </div>
 </div>
