@@ -7,13 +7,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body class="hold-transition skin-blue sidebar-mini">
-    <script type="text/javascript">
-      $(function(){
-        var notice = "<%= !flash[:notice].nil? ? flash[:notice].first : '' %>"
-        var type = "<%= !flash[:notice].nil? ? flash[:notice].last : '' %>"
-        $.notify(notice, type );
-      })
-    </script>
     <div class="wrapper">
     <%= render  "layouts/header" %>
     <%= render  "layouts/side-bar" %>
@@ -23,5 +16,12 @@
       </section>
     </div>
     <%= render  "layouts/footer" %>
+    <script type="text/javascript">
+      $(function(){
+        var notice = "<%= !flash[:notice].nil? ? flash[:notice].first : '' %>"
+        var type = "<%= !flash[:notice].nil? ? flash[:notice].last : '' %>"
+        $.notify(notice, type );
+      })
+    </script>
   </body>
 </html>
