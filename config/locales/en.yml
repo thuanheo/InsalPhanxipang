@@ -14,6 +14,7 @@ en:
       price: "price"
       renting_fee: "renting fee"
       image_url: "image url"
+      notice_delete: "delete success"
   layouts:
     categories: "Categorisdgdfgdfes"
     bills: "Bills"

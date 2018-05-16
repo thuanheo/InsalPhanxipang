@@ -20,3 +20,4 @@
 //= require views/loginView.js
 //= require notify.js
 //= require views/productsView.js
+//= require bootbox.min.js
