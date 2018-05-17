@@ -1,6 +1,5 @@
 class Admin::CategoriesController < Admin::ApplicationController
-  before_action :login_required, only: [:index]
   def index
-    @categories = Category.all
+    @categories = Category.all.page(params[:page]).per(5)
   end
 end
