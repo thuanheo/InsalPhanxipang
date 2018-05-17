@@ -4,19 +4,27 @@
     <% end %>
     <div class="col-md-3 col-sm-6 col-xs-12 item">
       <div class="image" style="background-image: url(<%= item.image %>);">
-        <i class="fa fa-times-circle fa-2x delete"></i>
+        <i class="fa fa-times-circle fa-2x delete bt-delete" id-button="<%= item.id %>"></i>
         <i class="fa fa-edit fa-2x edit"></i>
       </div>
       <div class="title">
         <a class="link" href="#">
-          <p><%= item.name %></p>
+          <p id-name="<%= item.id %>"><%= item.name %></p>
         </a>
       </div>
     </div>
-    <% if ((index + 1) % 4 == 0 || index == (@products.size - 1)) %>
+    <% if ((index + 1) % 4 == 0 || index == (products.size - 1)) %>
     </div>
   <% end %>
 <% end %>
 <div class="row paginate">
-  <%= paginate @products, theme: "twitter-bootstrap-4" %>
+  <%= paginate products, theme: "twitter-bootstrap-4" %>
 </div>
+<script type="text/javascript">
+  $(function () {
+    var notice = "<%= !flash[:notice].nil? ? flash[:notice].first : '' %>"
+    var type = "<%= !flash[:notice].nil? ? flash[:notice].last : '' %>"
+    $.notify(notice, type);
+    <% flash[:notice] = "" %>
+  })
+</script>
